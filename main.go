@@ -41,9 +41,9 @@ func main() {
 
 	if err != nil {
 		fmt.Println(chalk.Red.Color("Error:"), err)
-		return
+		panic(err)
 	}
 
-	fmt.Println(chalk.Green.Color("Image generated successfully."))
-	fmt.Println(chalk.Green.Color("Image URL:"), image)
+	internal.PrintAsciiImage(image)
+
 }
