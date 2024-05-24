@@ -5,7 +5,7 @@ from diffusers import StableDiffusionPipeline
 
 if __name__ == "__main__":
     try:
-        os.remove("output.jpeg")
+        os.remove("output.png")
     except FileNotFoundError:
         pass
     parser = argparse.ArgumentParser(description='Diffusers CLI')
@@ -19,4 +19,4 @@ if __name__ == "__main__":
 
     _ = pipe(prompt, num_inference_steps=1)
     image = pipe(prompt).images[0]
-    image.save("output.jpeg")
+    image.save("output.png")

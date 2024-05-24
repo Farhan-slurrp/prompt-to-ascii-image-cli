@@ -6,15 +6,12 @@ import (
 )
 
 func GenerateImage(prompt string) (image.Image, error) {
-	out, err := exec.Command("python3", "generate_image.py", "--prompt", prompt).Output()
+	_, err := exec.Command("python3", "generate_image.py", "--prompt", prompt).Output()
 	if err != nil {
 		return nil, err
 	}
-	if len(out) == 0 {
-		return nil, nil
-	}
 
-	image, err := LoadImage("output.jpeg")
+	image, err := LoadImage("output.png")
 	if err != nil {
 		return nil, err
 	}

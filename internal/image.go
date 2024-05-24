@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"image"
 	"image/color"
+	_ "image/png"
 	"os"
 )
 
@@ -42,7 +43,7 @@ func LoadImage(path string) (image.Image, error) {
 func PrintAsciiImage(image image.Image) {
 	ramp := "@%#*+=-:. "
 	max := image.Bounds().Max
-	scaleX, scaleY := 10, 5
+	scaleX, scaleY := 5, 10
 	for y := 0; y < max.Y; y += scaleY {
 		for x := 0; x < max.X; x += scaleX {
 			avg := avgPixel(image, x, y, scaleX, scaleY)
