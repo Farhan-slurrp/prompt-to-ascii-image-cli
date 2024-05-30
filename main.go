@@ -25,18 +25,18 @@ func StringPrompt(label string) string {
 
 func main() {
 	fmt.Println(chalk.Green.Color(`
-@@@@@@@@@@@@@=:::-*@@- .:*@@@@@@@@@@@@***%@@%****@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@+  @@@@= :@@#  =##****+%% -@@@@# -@@@@@#..*@@@@%. =@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@+  @@@@= .@@@  #@@@@@@@@# +@@@@* -@@@@%.:%@@@@@@#  #@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@+  ::::  .@@%  --==+**@@* +@@@@+ =@@@@* .@@@@@@@@  +@@@@@@@@@@@@@@
-%@@@@@@@@@@@@@=  @@@@: .@@%  ###****@@+ *@@@@+ =@@@@+ .@@@@@@@%  +@@@@@@@@@@@@@@
-%@@@@@@@@@@@@@=  @@@@- .@@%  @@@@@@@@@+ *@@@@* +@@@@#  %@@@@@@+  #@@@@@@@@@@@@@@
-%@@@@@@@@@@@@@= :@@@@+ .@@@  @@@@@@@@%# +@@@%* +@@@@%. :%@@@@+ .*@@@@@@@@@@@@@@@
-%@@@@@@@@@@@@@= -@@@@*  @@@- .::::--.=.  .:: .  .:::..#-..::.:=%@@@@@@@@@@@@@@%%
+=============================================
+          WELCOME TO ASCII ART GENERATOR
+=============================================
 
+Transform your images into stunning ASCII art with ease!
 
-WELCOME TO ASCII IMAGE GENERATOR!!
-ENTER YOUR PROMPT TO GENERATE YOUR IMAGE.
+Whether you're looking to create unique text-based art, share fun images with friends, 
+or just explore the world of ASCII, this tool makes it simple for you.
+
+-------------------------------------------------------------
+Enter your prompt to get started!!!
+-------------------------------------------------------------
 	`))
 	prompt := StringPrompt("Enter the prompt:")
 	fmt.Println(chalk.Blue.Color("\nGenerating image..."))
